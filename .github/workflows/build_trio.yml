@@ -15,9 +15,9 @@ env:
 
 jobs:
   # use a single runner for these sequential steps
-  #check_status:
-   # runs-on: ubuntu-latest
-   # name: Check status to decide whether to build
+  check_status:
+    runs-on: ubuntu-latest
+    name: Check status to decide whether to build
     permissions:
       contents: write
     outputs:
