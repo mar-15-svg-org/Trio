@@ -18,11 +18,11 @@ jobs:
   #check_status:
    # runs-on: ubuntu-latest
    # name: Check status to decide whether to build
-    #permissions:
-      #contents: write
-    #outputs:
-     # NEW_COMMITS: ${{ steps.sync.outputs.has_new_commits }}
-      #IS_SECOND_IN_MONTH: ${{ steps.date-check.outputs.is_second_instance }}
+    permissions:
+      contents: write
+    outputs:
+      NEW_COMMITS: ${{ steps.sync.outputs.has_new_commits }}
+      IS_SECOND_IN_MONTH: ${{ steps.date-check.outputs.is_second_instance }}
 
     # Check GH_PAT, sync repository, check day in month
     steps:
